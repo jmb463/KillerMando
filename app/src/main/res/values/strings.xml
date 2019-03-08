@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">KillerRemote</string>
+    <string name="title">KillerGame</string>
+    <string name="ip">Direccion IP</string>
+    <string name="port">Puerto</string>
+    <string name="mensaje">Introduzca su nombre</string>
+    <string name="enviar">PLAY</string>
+
+    <string name="help">Help Screen</string>
+    <string name="menu">Main Menu Screen</string>
+    <string name="settings">Settings Screen</string>
+    <string name="game">Game Screen</string>
+    <string name="scores">Scores Screen</string>
+    <string name="app_logo_top">KILLER GAME</string>
+    <string name="app_logo_bottom">DONE THAT!</string>
+    <string name="app_version_info">
+        The objective is to kill all the other spaceships\nPut in the menu the ip, port and your name and start playing!.\n
+        Click on the gears to change the color of the spaceship and more\nClick on the medal to see the records set on this device\nChallenge your friends and show them whos the best!
+
+    </string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="rankings">RANKINGS</string>
+    <string name="primClas">Primer Clasificado: </string>
+    <string name="segClas">Segundo Clasificado: </string>
+    <string name="terClas">Tercer Clasificado: </string>
+    <string name="dialog_message">Ya hay 4 jugadores en esta pantalla o la partida ya ha empezado</string>
+    <string name="dialog_title">Error</string>
+    <string name="ok">Volver atrás</string>
+    <string-array name="brew_array">
+        <item>Negro</item>
+        <item>Rojo</item>
+        <item>Azul</item>
+        <item>Verde</item>
+        <item>Marron</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
