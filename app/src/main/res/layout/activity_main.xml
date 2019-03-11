@@ -15,7 +15,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="86dp"
-        android:onClick="fire"
+        android:onClick="shoot"
         android:text="Fire"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
