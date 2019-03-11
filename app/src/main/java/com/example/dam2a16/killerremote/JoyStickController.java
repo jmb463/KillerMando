@@ -37,13 +37,13 @@ public class JoyStickController {
     private DrawCanvas draw;
     private Paint paint;
     private Bitmap stick;
-    private ConnectServer cs;
+    private Server cs;
 
     private String lastCommand;
 
     private boolean touch_state = false;
 
-    public JoyStickController(Context context, ViewGroup layout, int stick_res_id, ConnectServer cs) {
+    public JoyStickController(Context context, ViewGroup layout, int stick_res_id, Server cs) {
         mContext = context;
         this.cs = cs;
         stick = BitmapFactory.decodeResource(mContext.getResources(),
@@ -60,7 +60,7 @@ public class JoyStickController {
     }
 
 
-    public ConnectServer getConnectionServer(){
+    public Server getConnectionServer(){
         return this.cs;
     }
 

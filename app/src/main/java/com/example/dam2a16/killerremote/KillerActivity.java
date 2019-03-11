@@ -3,15 +3,10 @@ package com.example.dam2a16.killerremote;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.Socket;
 
 
 public class KillerActivity extends AppCompatActivity implements ComunicaMenu{
@@ -52,7 +47,7 @@ public class KillerActivity extends AppCompatActivity implements ComunicaMenu{
 
     @Override
     public void menu(int queboton) {
-        Intent in = new Intent(this, ActividadHerramientas.class);
+        Intent in = new Intent(this, ToolActivity.class);
 
         in.putExtra("BOTONPULSADO", queboton);
 

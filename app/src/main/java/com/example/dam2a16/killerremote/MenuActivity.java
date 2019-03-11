@@ -5,21 +5,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
     private EditText editText_ip;
     private EditText editText_port;
-    private ConnectServer cs;
+    private Server cs;
     private KillerActivity ka;
     public static final String CONNECTION_PREFERENCES = "ConPrefs";
     private Spinner spinner;
@@ -35,7 +31,7 @@ public class MenuActivity extends AppCompatActivity {
         this.editText_port = (EditText) findViewById(R.id.editText_port);
 
 
-        this.cs = new ConnectServer();
+        this.cs = new Server();
 
         SharedPreferences settings = getSharedPreferences(CONNECTION_PREFERENCES, MODE_PRIVATE);
 
@@ -77,29 +73,22 @@ public class MenuActivity extends AppCompatActivity {
 
     public void start(){
         String color = spinner.getSelectedItem().toString();
-        //String name = this.ka.getNombre();
         Intent intent = new Intent(this, MainActivity.class);
         String connection = this.cs.getHOST() + "&" + this.cs.getPORT() + "&" +color;
         intent.putExtra("Connection", connection);
         startActivity(intent);
     }
 
-    /*public void saltar(){
-        Intent intento = new Intent(this,MenuActivity.class);
-        startActivity(intento);
-    }*/
 
     private void savePreferences(){
         String ip = String.valueOf(this.editText_ip.getText());
         String port = String.valueOf(this.editText_port.getText());
-        //String name = this.ka.getNombre();
 
         Log.i("myconn", "Destruido " + ip + " " + port);
         SharedPreferences settings = getSharedPreferences(CONNECTION_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor prefEditor = settings.edit();
         prefEditor.putString("IP", ip);
         prefEditor.putString("port", port);
-        //prefEditor.putString("name",name);
         prefEditor.commit();
     }
 
